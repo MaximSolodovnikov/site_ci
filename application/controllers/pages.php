@@ -11,7 +11,9 @@ class Pages extends CI_Controller {
         /*$this->load->library('template'); --- установлено в автозагрузке*/
         $data['pages'] = $this->pages_model->get_pages();
         $data['pages_info'] = $this->pages_model->get_pages_info($title);
-        $this->template->page_view($data);
+        $data['categories'] = $this->pages_model->get_cat();
+        $name = 'page';
+        $this->template->page_view($data, $name);
     }
 }
 
