@@ -10,6 +10,7 @@ class Articles extends CI_Controller {
         $data['pages_info'] = $this->pages_model->get_pages_info('articles');
         $data['categories'] = $this->pages_model->get_cat();
         $data['articles'] = $this->articles_model->get_all_articles();
+        $data['latest_articles'] = $this->pages_model->get_latest_articles();
         $name = 'articles';
         $this->template->page_view($data, $name);
     }
@@ -23,6 +24,7 @@ class Articles extends CI_Controller {
         $data['pages_info'] = $this->pages_model->get_pages_info('articles');
         $data['categories'] = $this->pages_model->get_cat();
         $data['articles'] = $this->articles_model->get_cat_articles($cat);
+        $data['latest_articles'] = $this->pages_model->get_latest_articles();
         $name = 'articles';
         $this->template->page_view($data, $name);
     }

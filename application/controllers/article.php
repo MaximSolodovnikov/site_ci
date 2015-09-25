@@ -10,6 +10,7 @@ class Article extends CI_Controller {
         $data['pages'] = $this->pages_model->get_pages();
         $data['pages_info'] = $this->articles_model->get_article($title);
         $data['categories'] = $this->pages_model->get_cat();
+        $data['latest_articles'] = $this->pages_model->get_latest_articles();
         $name = 'article';
         $this->template->page_view($data, $name);
     }

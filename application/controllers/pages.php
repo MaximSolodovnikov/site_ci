@@ -12,6 +12,7 @@ class Pages extends CI_Controller {
         $data['pages'] = $this->pages_model->get_pages();
         $data['pages_info'] = $this->pages_model->get_pages_info($title);
         $data['categories'] = $this->pages_model->get_cat();
+        $data['latest_articles'] = $this->pages_model->get_latest_articles();
         $name = 'page';
         $this->template->page_view($data, $name);
     }

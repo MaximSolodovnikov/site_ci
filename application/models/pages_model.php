@@ -24,5 +24,13 @@ class Pages_model extends CI_Model {
         
         return $query->result_array();
     }
+    
+    public function get_latest_articles() {
+        
+        $this->db->order_by('id_art', 'desc');
+        $this->db->limit('5');
+        $query = $this->db->get('articles');
+        return $query->result_array();
+    }
 }
 
