@@ -3,7 +3,7 @@
     <?php foreach ($categories as $item) { ?>
     <ul>
         <li>
-            <a href="<?php echo base_url();?>index.php/articles/<?php echo $item['title_url_cat']; ?>"><?php echo $item['title_cat']; ?></a>
+            <a href="<?php echo base_url();?>index.php/articles/<?php echo $item['title_url_cat']; ?>"><?php echo $item['title']; ?></a>
         </li>
     </ul>
     <?php } ?>

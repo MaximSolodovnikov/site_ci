@@ -27,4 +27,3 @@ class Articles extends CI_Controller {
         $this->template->page_view($data, $name);
     }
 }
-

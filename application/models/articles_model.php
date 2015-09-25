@@ -16,4 +16,12 @@ class Articles_model extends CI_Model {
         
         return $query->result_array();
     }
+    
+    public function get_article($title) {
+        
+        $this->db->where('title_url', $title);
+        $query = $this->db->get('articles');
+        
+        return $query->row_array();
+    }
 }

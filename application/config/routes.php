@@ -43,6 +43,7 @@ $route['404_override'] = '';
 
 $route['pages/(:any)'] = "pages/page/$1";
 $route['articles/(:any)'] = "articles/cat/$1";
+$route['article/(:any)'] = "article/view/$1";
 
 
 /* End of file routes.php */
