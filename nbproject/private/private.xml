@@ -3,19 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/WebServers/home/localhost/www/site_ci/application/views/blocks/preheader_view.php</file>
-            <file>file:/D:/WebServers/home/localhost/www/site_ci/application/views/blocks/menu_view.php</file>
-            <file>file:/D:/WebServers/home/localhost/www/site_ci/application/views/layout_view.php</file>
             <file>file:/D:/WebServers/home/localhost/www/site_ci/application/models/articles_model.php</file>
             <file>file:/D:/WebServers/home/localhost/www/site_ci/application/controllers/articles.php</file>
-            <file>file:/D:/WebServers/home/localhost/www/site_ci/application/views/article_view.php</file>
-            <file>file:/D:/WebServers/home/localhost/www/site_ci/application/models/pages_model.php</file>
-            <file>file:/D:/WebServers/home/localhost/www/site_ci/application/controllers/article.php</file>
-            <file>file:/D:/WebServers/home/localhost/www/site_ci/application/views/page_view.php</file>
             <file>file:/D:/WebServers/home/localhost/www/site_ci/application/views/blocks/rightblock_view.php</file>
             <file>file:/D:/WebServers/home/localhost/www/site_ci/application/controllers/pages.php</file>
+            <file>file:/D:/WebServers/home/localhost/www/site_ci/style/style_3.css</file>
             <file>file:/D:/WebServers/home/localhost/www/site_ci/application/views/articles_view.php</file>
-            <file>file:/D:/WebServers/home/localhost/www/site_ci/application/libraries/template.php</file>
         </group>
     </open-files>
 </project-private>

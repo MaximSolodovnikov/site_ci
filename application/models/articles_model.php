@@ -2,9 +2,9 @@
 
 class Articles_model extends CI_Model {
     
-    public function get_all_articles() {
+    public function get_all_articles($num, $offset) {
         
-        $query = $this->db->get('articles');
+        $query = $this->db->get('articles', $num, $offset);
         
         return $query->result_array();
     }

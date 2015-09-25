@@ -31,6 +31,22 @@ div#footer p{margin:0;padding:5px 10px}
 #menu a:hover {
     color: #FFD100;
 }
+/*-----------------------------------------------*/
+#pagination {
+    color: red;
+    text-align: center;
+}
+
+#pagination a {
+    
+    display: inline-block;
+}
+
+#pagination a:hover {
+    color: orange;
+    font-weight: bold;
+}
+/*-----------------------------------------------*/
 
 div#wrapper{float:left;width:100%;margin-left:-33%}
 div#content{margin-left:33%}
