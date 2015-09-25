@@ -11,7 +11,7 @@ class Articles_model extends CI_Model {
     
     public function get_cat_articles($cat) {
         
-        $this->db->where('category_art', $cat);
+        $this->db->where('category', $cat);
         $query = $this->db->get('articles');
         
         return $query->result_array();
@@ -23,5 +23,10 @@ class Articles_model extends CI_Model {
         $query = $this->db->get('articles');
         
         return $query->row_array();
+    }
+    
+    public function add_comment($add) {
+        
+        $this->db->insert('comments', $add);
     }
 }
