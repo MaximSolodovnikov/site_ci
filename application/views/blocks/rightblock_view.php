@@ -1,7 +1,7 @@
 <div id="rightblock">
-    <p><strong>Разделы</strong>
+    <h3>Разделы</h3>
     <?php foreach ($categories as $item) { ?>
-        <ul class="nav nav-pills nav-stacked">
+        <ul >
             <li>
                 <a href="<?php echo base_url();?>index.php/articles/cat/<?php echo $item['title_url_cat']; ?>" ><?php echo $item['title']; ?></a>
             </li>
