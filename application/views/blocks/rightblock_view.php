@@ -1,11 +1,11 @@
 <div id="rightblock">
     <p><strong>Разделы</strong>
     <?php foreach ($categories as $item) { ?>
-    <ul>
-        <li>
-            <a href="<?php echo base_url();?>index.php/articles/cat/<?php echo $item['title_url_cat']; ?>"><?php echo $item['title']; ?></a>
-        </li>
-    </ul>
+        <ul class="nav nav-pills nav-stacked">
+            <li>
+                <a href="<?php echo base_url();?>index.php/articles/cat/<?php echo $item['title_url_cat']; ?>" ><?php echo $item['title']; ?></a>
+            </li>
+        </ul>
     <?php } ?>
     <p><a href="<?php echo base_url();?>index.php/articles">Все статьи</a></p>
 </div>

@@ -11,8 +11,6 @@ class Articles extends CI_Controller {
         $config['base_url'] = base_url() . 'index.php/articles/index/';
         $config['total_rows'] = $this->db->count_all('articles');
         $config['per_page'] = 1; 
-        $config['full_tag_open'] = "<p id='pagination'>";
-        $config['full_tag_close'] = '</p>';
         
         $this->pagination->initialize($config); 
         
