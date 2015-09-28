@@ -17,7 +17,7 @@
         <input type="hidden" name="avatar_comm" value='avatar.png'>
         <input type="hidden" name="title_url" >
         <input type="hidden" name="category_comm" >
-        <p><input type="submit" name="add" value="Отправить"></p>
+        <p><input class="btn btn-success" type="submit" name="add" value="Отправить"></p>
     </form>
         
     </div>    
