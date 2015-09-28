@@ -6,7 +6,16 @@
         <p>Дата публикации: <?php echo $pages_info['date_art']; ?></p>
       
     <br /><br /><hr />
-    <p>Оставить комментарий</p>
+    <p>Комментарии</p>
+    <hr />
+    
+    <?php foreach($comments as $item) {?>
+    
+    <p>Автор комментария: <?php echo $item['author_comm']; ?></p><br />
+    <p><img src="<?php echo base_url();?>img/avatar.png" alt=""><?php echo $item['author_comm']; ?></p><br />
+    <p>Текст комментария: <br /><?php echo $item['comment']; ?></p><br />
+    
+    <?php }?>
     <hr /><br /><br />
     <a name='f'></a>
     <form method="POST" action='<?php echo base_url();?>index.php/article/<?php echo $pages_info['title_url']; ?>#f'>
@@ -15,8 +24,8 @@
         <p>Текст комментария:<div id="show_error"><?php echo form_error('comment'); ?></div></p>
         <p><textarea name="comment" cols="70" rows="7"><?php echo set_value('comment'); ?></textarea></p><br /><br />
         <input type="hidden" name="avatar_comm" value='avatar.png'>
-        <input type="hidden" name="title_url" >
-        <input type="hidden" name="category_comm" >
+        <input type="hidden" name="title_url" value="<?php echo $pages_info['title_url']; ?>" >
+        <input type="hidden" name="category" value="<?php echo $pages_info['category']; ?>" >
         <p><input class="btn btn-success" type="submit" name="add" value="Отправить"></p>
     </form>
         

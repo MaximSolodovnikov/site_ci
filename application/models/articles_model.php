@@ -29,4 +29,13 @@ class Articles_model extends CI_Model {
         
         $this->db->insert('comments', $add);
     }
+    
+    public function get_comments($title) {
+        
+        $this->db->order_by('id_comm', 'desc');
+        $this->db->where('title_url', $title);
+        $query = $this->db->get('comments');
+        
+        return $query->result_array();
+    }
 }

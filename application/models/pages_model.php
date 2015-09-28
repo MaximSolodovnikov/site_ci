@@ -12,7 +12,7 @@ class Pages_model extends CI_Model {
     
     public function get_pages_info($title) {
         
-        $this->db->where('title_url_page', $title);
+        $this->db->where('title_url', $title);
         $query = $this->db->get('pages');
         
         return $query->row_array();

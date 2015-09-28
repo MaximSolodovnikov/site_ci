@@ -12,6 +12,7 @@ class Article extends CI_Controller {
         $data['pages_info'] = $this->articles_model->get_article($title);
         $data['categories'] = $this->pages_model->get_cat();
         $data['latest_articles'] = $this->pages_model->get_latest_articles();
+        $data['comments'] = $this->articles_model->get_comments($title);
         $name = 'article';
         
         if ($this->input->post('add')) {
@@ -26,7 +27,7 @@ class Article extends CI_Controller {
                 $comment_data['comment'] = $this->input->post('comment');
                 $comment_data['avatar_comm'] = $this->input->post('avatar');
                 $comment_data['title_url'] = $this->input->post('title_url');
-                $comment_data['category'] = $this->input->post('category_comm');
+                $comment_data['category'] = $this->input->post('category');
                 $comment_data['date_comm'] = date('Y-m-d');
                 $comment_data['time_comm'] = date('H:i:s');
                 
