@@ -10,7 +10,7 @@
     <p><a href="<?php echo base_url();?>index.php/articles">Все статьи</a></p>
 </div>
 <div id="rightblock">
-    <p><strong>Последние статьи</strong>
+    <h3>Последние статьи</h3>
     <?php foreach ($latest_articles as $item) { ?>
     <ul>
         <li>

@@ -13,6 +13,7 @@ class Article extends CI_Controller {
         $data['categories'] = $this->pages_model->get_cat();
         $data['latest_articles'] = $this->pages_model->get_latest_articles();
         $data['comments'] = $this->articles_model->get_comments($title);
+        $data['error'] = '';
         $name = 'article';
         
         if ($this->input->post('add')) {
@@ -21,25 +22,39 @@ class Article extends CI_Controller {
             $this->form_validation->set_rules($this->rules_model->comment_rules);
             $check = $this->form_validation->run();
             
-            if($check) {
+            if ($check) {
                
-                $comment_data['author_comm'] = $this->input->post('author');
-                $comment_data['comment'] = $this->input->post('comment');
-                $comment_data['avatar_comm'] = $this->input->post('avatar');
-                $comment_data['title_url'] = $this->input->post('title_url');
-                $comment_data['category'] = $this->input->post('category');
-                $comment_data['date_comm'] = date('Y-m-d');
-                $comment_data['time_comm'] = date('H:i:s');
+                $captcha = $this->input->post('captcha');
                 
-                $this->articles_model->add_comment($comment_data); 
-                redirect(base_url(). 'index.php/article/' . $title);
+                if ($captcha == $this->session->userdata['captcha']) {
+                    
+                    $comment_data['author_comm'] = $this->input->post('author');
+                    $comment_data['comment'] = $this->input->post('comment');
+                    $comment_data['avatar_comm'] = $this->input->post('avatar');
+                    $comment_data['title_url'] = $this->input->post('title_url');
+                    $comment_data['category'] = $this->input->post('category');
+                    $comment_data['date_comm'] = date('Y-m-d');
+                    $comment_data['time_comm'] = date('H:i:s');
+                
+                    $this->articles_model->add_comment($comment_data); 
+                    redirect(base_url(). 'index.php/article/' . $title . '#c');
+                }
+                else {
+                    
+                    $data['error'] = "Символы с картинки не совпадают";
+                    $data['captcha'] = $this->captcha->get_captcha();
+                    $this->template->page_view($data, $name);
+                }              
             }
             else {
                 
+                $data['captcha'] = $this->captcha->get_captcha();
                 $this->template->page_view($data, $name);
             }
         }
         else {
+            
+            $data['captcha'] = $this->captcha->get_captcha();
             $this->template->page_view($data, $name);
         }
     }

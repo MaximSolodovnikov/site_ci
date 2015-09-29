@@ -17,6 +17,13 @@ class Rules_model extends CI_Model {
         'label' => 'Текст комментария', 
         'rules' => 'required' 
         
+        ),
+        array (
+            
+        'field' => 'captcha',
+        'label' => 'Символы с картинки', 
+        'rules' => 'required' 
+        
         )
     );
 }
